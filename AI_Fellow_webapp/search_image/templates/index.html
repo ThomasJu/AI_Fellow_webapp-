@@ -2,9 +2,15 @@
 <html>
 <body>
 
-<h1>Search Image</h1>
+<h1>The simple Meme generator</h1>
 
-<p>Here to search image</p>
+<p style="text-align:center">
+    <form action="/search_image/image_input/" method="GET" style="text-align:center">
+        <label for="image_input">Search Image: </label>
+        <input id="image_input" type="text" name="image_input" value="{{ random }}">   
+        <input type="submit" value="OK">
+    </form>
+</p>
 
 </body>
 </html>
