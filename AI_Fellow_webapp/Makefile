@@ -4,7 +4,5 @@ server:
 install:
 	sudo apt-get install python-flickrapi
 
-git:
-	git add .
-	git commit 
-	git push
+prereq:
+	pipreqs --force .
