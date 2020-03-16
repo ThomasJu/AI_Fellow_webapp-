@@ -15,9 +15,9 @@ Select a photos:
 
 <form action="/display/" method="GET" style="text-align:center">
     <label for="images">Choose a images:</label>
-    <select id="images" name = 'image'>
+    <select id="images" name='image'>
         {% for url in photo_url %}
-            <option value={{ forloop.counter0 }}> {{ url.1 }}</option>
+            <option value={{ url.0 }}> {{ url.1 }}</option>
         {% endfor %}
     </select>
     <label for="text_input">Enter texts you want to put on the meme: </label>
