@@ -21,9 +21,9 @@ def search_image(request):
     photos = images['photos']
     photo_url = []
     
-    #pp = pprint.PrettyPrinter(indent=4)
+    pp = pprint.PrettyPrinter(indent=4)
     
     for picture in photos['photo']:
-        photo_url.append(picture['url_m'])
-    #pp.pprint(photo_url)
+        photo_url.append([picture['url_m'], picture['title']])
+    pp.pprint(photo_url)
     return render(request, 'image_input.html', context={'photo_url':photo_url})

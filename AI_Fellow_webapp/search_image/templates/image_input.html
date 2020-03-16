@@ -2,11 +2,28 @@
 <html>
 <body>
 
-<h1>Next html</h1>
+<h1>The meme generator</h1>
+Select a photos:
 <ul>
 {% for url in photo_url %}
-    <img src="{{ url }}"></img>
+    <img src="{{ url.0 }}"></img>
+    {{ url.1 }}
+    <br></br>
 {% endfor %}
+
+<br></br>
+
+<form action="/display/" method="GET" style="text-align:center">
+    <label for="images">Choose a images:</label>
+    <select id="images" name = 'image'>
+        {% for url in photo_url %}
+            <option value={{ forloop.counter0 }}> {{ url.1 }}</option>
+        {% endfor %}
+    </select>
+    <label for="text_input">Enter texts you want to put on the meme: </label>
+    <input id="text_input" type="text" name="text_input" value="{{ random }}">   
+    <input type="submit" value="OK">
+</form>
 </ul>
 
 </body>

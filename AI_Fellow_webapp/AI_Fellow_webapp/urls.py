@@ -32,6 +32,10 @@ urlpatterns += [
     path('', RedirectView.as_view(url='search_image/', permanent=True)),
 ]
 
+# forward search_image request to search_image.urls
+urlpatterns += [
+    path('display/', include('display.urls')),
+]
 
 # Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
