@@ -4,8 +4,9 @@ from .forms import image_input
 
 import pprint
 from flickrapi import FlickrAPI
-FLICKR_PUBLIC = '79fab41e5645d0b653338dba0b2430a0'
-FLICKR_SECRET = 'f8cae0b2d1bae413'
+
+FLICKR_PUBLIC = #FLICKER_PUBLIC_KEY
+FLICKR_SECRET = #FLICKER_SECRET_KEY
 
 
 def index(request):

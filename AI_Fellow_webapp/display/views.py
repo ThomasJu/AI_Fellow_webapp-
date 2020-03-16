@@ -2,6 +2,7 @@ from django.shortcuts import render
 from PIL import Image, ImageDraw, ImageFont
 import requests
 from io import BytesIO
+from django.utils.encoding import smart_str
 
 # Create your views here.
 def display(request):
@@ -18,5 +19,7 @@ def display(request):
     return render(request, 'display.html')
 
 def download(request):
-    print("where ewehr")
+    '''
+    some code that performs download features
+    '''
     return render(request, 'download.html')
